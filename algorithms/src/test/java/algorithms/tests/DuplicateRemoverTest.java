@@ -1,7 +1,9 @@
-package test.java.algorithms.tests;
+package algorithms.tests;
 
 import org.junit.Test;
-import main.java.algorithms.DuplicateRemover;
+
+import algorithms.DuplicateRemover;
+
 import static org.junit.Assert.assertArrayEquals;
 
 public class DuplicateRemoverTest {

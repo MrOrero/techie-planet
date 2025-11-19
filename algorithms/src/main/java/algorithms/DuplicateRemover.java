@@ -1,6 +1,4 @@
-package main.java.algorithms;
-
-import java.util.Arrays;
+package algorithms;
 
 /**
  * I went with a simple hash map implementation to track duplicates.
