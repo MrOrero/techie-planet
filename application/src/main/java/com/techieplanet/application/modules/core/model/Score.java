@@ -3,6 +3,7 @@ package com.techieplanet.application.modules.core.model;
 import com.techieplanet.application.libs.core.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 import jakarta.persistence.Column;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
@@ -12,7 +13,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "scores")
+@Table(name = "scores", uniqueConstraints = {
+    @UniqueConstraint(columnNames = {"student_id", "subject_id"})
+})
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 public class Score extends BaseEntity {
