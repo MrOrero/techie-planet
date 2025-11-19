@@ -1,0 +1,41 @@
+A left join returns all records from the left table along with corresponding records from
+the right table that matches a certain criteria. if there is no match on the right table, it returns null
+
+using the provided image for instance, if we did a left join
+
+SELECT g.yr, g.city, c.name, c.country
+FROM games g
+LEFT JOIN city c ON g.city = c.name;
+
+our result will look like:
+
+yr	city	name	country
+2004	Athens	Athens	Greece
+2008	Beijing	Beijing	China
+2012	London	London	UK
+2032	NULL	NULL	NULL
+
+the  2032 row returns because it exists on the left table (games) but no corresponding record on the right table
+so it returns null
+
+
+A right join returns all records from the right table along with corresponding records from
+the left table that matches a certain criteria. if there is no match on the left table, it returns null
+
+using the provided image for instance, if we did a right join
+
+SELECT g.yr, g.city, c.name, c.country
+FROM games g
+RIGHT JOIN city c ON g.city = c.name;
+
+our result will look like:
+
+yr	city	name	country
+2004	Athens	Athens	Greece
+2008	Beijing	Beijing	China
+2012	London	London	UK
+NULL	NULL	Sydney	Australia
+
+the Sydney row returns (with Sydney and Australia) because they exists on the right table (city) but no corresponding record on the left table
+so yr and city returns null
+
