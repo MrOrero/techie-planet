@@ -1,11 +1,12 @@
 package com.techieplanet.application.config;
 
-import com.techieplanet.application.model.Student;
-import com.techieplanet.application.model.Subject;
-import com.techieplanet.application.repository.StudentRepository;
-import com.techieplanet.application.repository.SubjectRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import com.techieplanet.application.modules.core.model.Student;
+import com.techieplanet.application.modules.core.model.Subject;
+import com.techieplanet.application.modules.core.repository.StudentRepository;
+import com.techieplanet.application.modules.core.repository.SubjectRepository;
 
 import java.util.Arrays;
 import java.util.List;

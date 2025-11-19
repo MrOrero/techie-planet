@@ -1,4 +1,4 @@
-package com.techieplanet.application.model;
+package com.techieplanet.application.modules.core.model;
 
 import com.techieplanet.application.libs.core.BaseEntity;
 import jakarta.persistence.Entity;

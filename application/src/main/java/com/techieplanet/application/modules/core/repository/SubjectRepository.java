@@ -1,8 +1,9 @@
-package com.techieplanet.application.repository;
+package com.techieplanet.application.modules.core.repository;
 
-import com.techieplanet.application.model.Subject;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.techieplanet.application.modules.core.model.Subject;
 
 import java.util.Optional;
 
