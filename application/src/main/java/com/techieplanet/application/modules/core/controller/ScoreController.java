@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.techieplanet.application.modules.core.dto.ScoreRequest;
+import com.techieplanet.application.modules.core.dto.request.ScoreRequest;
 import com.techieplanet.application.modules.core.model.Score;
 import com.techieplanet.application.modules.core.service.ScoreService;
 

@@ -1,4 +1,4 @@
-package com.techieplanet.application.modules.core.dto;
+package com.techieplanet.application.modules.core.dto.request;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;

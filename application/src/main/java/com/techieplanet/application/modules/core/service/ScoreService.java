@@ -3,7 +3,8 @@ package com.techieplanet.application.modules.core.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.techieplanet.application.modules.core.dto.ScoreRequest;
+import com.techieplanet.application.libs.common.exception.ResourceNotFoundException;
+import com.techieplanet.application.modules.core.dto.request.ScoreRequest;
 import com.techieplanet.application.modules.core.model.Score;
 import com.techieplanet.application.modules.core.model.Student;
 import com.techieplanet.application.modules.core.model.Subject;
@@ -25,10 +26,10 @@ public class ScoreService {
 
     public Score saveScore(ScoreRequest scoreRequest) {
         Student student = studentRepository.findById(scoreRequest.getStudentId())
-                .orElseThrow(() -> new RuntimeException("Student not found with id: " + scoreRequest.getStudentId()));
+                .orElseThrow(() -> new ResourceNotFoundException("Student not found with id: " + scoreRequest.getStudentId()));
 
         Subject subject = subjectRepository.findById(scoreRequest.getSubjectId())
-                .orElseThrow(() -> new RuntimeException("Subject not found with id: " + scoreRequest.getSubjectId()));
+                .orElseThrow(() -> new ResourceNotFoundException("Subject not found with id: " + scoreRequest.getSubjectId()));
 
         Score scoreToSave = scoreRepository.findByStudentIdAndSubjectId(student.getId(), subject.getId())
                 .map(existingScore -> {
